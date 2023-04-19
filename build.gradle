@@ -1,0 +1,36 @@
+import com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext
+
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.3.4.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'redis.clients:jedis:3.7.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.2'
+    implementation 'com.h2database:h2:1.4.197'
+
+    implementation 'org.apache.ignite:ignite-core:2.10.0' // Ignite 核心模块
+    implementation 'org.apache.ignite:ignite-spring:2.10.0' // Spring 集成模块
+    implementation 'org.apache.ignite:ignite-slf4j:2.10.0'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.projectlombok:lombok:1.18.12'// SLF4J 日志模块
+    implementation 'org.apache.logging.log4j:log4j-api'
+    implementation 'org.apache.logging.log4j:log4j-core'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
