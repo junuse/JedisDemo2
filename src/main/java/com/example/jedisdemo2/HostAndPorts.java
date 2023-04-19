@@ -13,8 +13,8 @@ public final class HostAndPorts {
   private static List<HostAndPort> clusterHostAndPortList = new ArrayList<>();
 
   static {
-//    redisHostAndPortList.add(new HostAndPort("mytest", 20179));
     redisHostAndPortList.add(new HostAndPort("localhost", 6379));
+//    redisHostAndPortList.add(new HostAndPort("192.168.0.203", 26379));
 
     sentinelHostAndPortList.add(new HostAndPort("localhost", Protocol.DEFAULT_SENTINEL_PORT));
     sentinelHostAndPortList.add(new HostAndPort("localhost", Protocol.DEFAULT_SENTINEL_PORT + 1));
