@@ -25,6 +25,7 @@ public class GetSetBenchmark {
     try {
       Jedis jedis = new Jedis(hnp);
       jedis.connect();
+      jedis.auth("123456");
       jedis.flushAll();
 
       long begin = Calendar.getInstance().getTimeInMillis();
