@@ -27,6 +27,8 @@ dependencies {
     implementation 'org.projectlombok:lombok:1.18.12'// SLF4J 日志模块
     implementation 'org.apache.logging.log4j:log4j-api'
     implementation 'org.apache.logging.log4j:log4j-core'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-core:9.0.41'
+
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
